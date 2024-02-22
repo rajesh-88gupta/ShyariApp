@@ -5,6 +5,12 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="save_task_sameTaskSaveAgain_replaceWithNewOne()">
+        <State />
+      </entry>
+      <entry key="save_todo_into_table()">
+        <State />
+      </entry>
     </value>
   </component>
 </project>
