@@ -96,7 +96,8 @@ dependencies {
     testImplementation ("com.google.dagger:hilt-android-testing:2.50")
     kspTest ("com.google.dagger:hilt-compiler:2.50")
 
-
+    testImplementation ("com.google.truth:truth:1.4.1")
+    androidTestImplementation ("com.google.truth:truth:1.4.1")
     implementation("androidx.navigation:navigation-compose:$nav_version")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
     implementation("io.coil-kt:coil-compose:2.5.0")
