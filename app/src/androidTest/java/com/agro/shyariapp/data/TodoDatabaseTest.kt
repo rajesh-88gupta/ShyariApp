@@ -56,4 +56,47 @@ class TodoDatabaseTest {
         assertThat(todos).contains(todo2)
        // assertThat(todos).hasSize(1)
     }
+    @Test
+    fun update_task_in_the_table() = runTest(UnconfinedTestDispatcher()){
+        val todo = Todo("Rajesh","Engineer")
+        dao.insert(todo)
+
+        val updateTodo =todo.copy("Hello","How are you")
+        dao.update(updateTodo)
+        assertThat(dao.get(todo.id!!)).isEqualTo(updateTodo)
+    }
+
+    @Test
+    fun delete_task_from_table() = runTest(UnconfinedTestDispatcher()) {
+        val todo1 = Todo("Rajesh","Engineer")
+        val todo2 = Todo("Brajesh","Social Worker")
+        val todo3 = Todo("Mohani","Teacher")
+        dao.insert(todo1)
+        dao.insert(todo2)
+        dao.insert(todo3)
+        dao.delete(todo2)
+
+        val todos =dao.getAllTodos().first()
+        assertThat(todos).doesNotContain(todo2)
+        assertThat(todos).containsExactly(todo1,todo3)
+        assertThat(todos).hasSize(2)
+    }
+    @Test
+    fun check_table_is_empty_or_not() = runTest(UnconfinedTestDispatcher()) {
+        val todo1 = Todo("Rajesh","Engineer")
+        dao.insert(todo1)
+        dao.delete(todo1)
+        val todos =dao.getAllTodos().first()
+        assertThat(todos).hasSize(0)
+    }
+
+    @Test
+    fun get_all_task_from_table() = runTest(UnconfinedTestDispatcher()) {
+        val todo1 = Todo("Rajesh","Engineer")
+        val todo2 = Todo("Brajesh","Social Worker")
+        dao.insert(todo1)
+        dao.insert(todo2)
+        val todos =dao.getAllTodos().first()
+        assertThat(todos).hasSize(2)
+    }
 }
