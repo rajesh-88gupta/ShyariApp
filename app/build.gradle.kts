@@ -79,7 +79,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation ("com.google.dagger:hilt-android:2.50")
-    debugImplementation ("androidx.compose.ui:ui-tooling:1.6.1")
+    debugImplementation ("androidx.compose.ui:ui-tooling:1.6.2")
     implementation ("androidx.compose.ui:ui-tooling-preview:1.6.1")
     ksp ("com.google.dagger:hilt-compiler:2.50")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
