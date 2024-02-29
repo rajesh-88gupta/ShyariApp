@@ -80,7 +80,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation ("com.google.dagger:hilt-android:2.50")
     debugImplementation ("androidx.compose.ui:ui-tooling:1.6.2")
-    implementation ("androidx.compose.ui:ui-tooling-preview:1.6.1")
+    implementation ("androidx.compose.ui:ui-tooling-preview:1.6.2")
     ksp ("com.google.dagger:hilt-compiler:2.50")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     //retrofit
@@ -99,6 +99,6 @@ dependencies {
     testImplementation ("com.google.truth:truth:1.4.1")
     androidTestImplementation ("com.google.truth:truth:1.4.1")
     implementation("androidx.navigation:navigation-compose:$nav_version")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation("io.coil-kt:coil-compose:2.5.0")
 }
